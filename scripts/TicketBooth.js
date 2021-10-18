@@ -6,7 +6,11 @@ eventHub.addEventListener()
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
-            Add button here
+        <button id="rideTicket">Ride Ticket</button>
+        <button id="foodTicket">Food Ticket</button>
+        <button id="gameTicket">Game Ticket</button>
+        <button id="sideshowTicket">Sideshow Ticket</button>
+        <button id="fullPackageTicket">Full Package Ticket</button>
         </div>
     `
 }
