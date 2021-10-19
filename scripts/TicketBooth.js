@@ -1,7 +1,31 @@
+
 const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
 
-eventHub.addEventListener()
+
+// Ride Ticket Custom Event 
+const rideEvent = new CustomEvent("rideTicketPurchased", {
+    detail: {
+        selectedTickets: "#rideTicket"
+    }
+})
+eventHub.dispatchEvent(rideEvent)
+
+// Food Ticket Custom Event
+const foodEvent = new CustomEvent("foodTicketPurchased", {
+    detail: {
+        selectedTickets: "#foodTicket"
+    }
+})
+eventHub.dispatchEvent(foodEvent)
+
+// Game Ticket Custom Event 
+const gameEvent = new CustomEvent("gameTicketPurchased", {
+    detail: {
+        selectedTickets: "#gameTicket"
+    }
+})
+eventHub.dispatchEvent(gameEvent)
 
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
