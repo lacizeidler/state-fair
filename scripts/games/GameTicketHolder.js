@@ -10,3 +10,4 @@ export const GameTicketHolders = () => {
         contentTarget.innerHTML += `<div class = "person games"></div>`
     })
 }
+TicketBooth()
