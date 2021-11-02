@@ -1,4 +1,3 @@
-
 const contentTarget = document.querySelector(".rides")
 const eventHub = document.querySelector("#state-fair")  
 

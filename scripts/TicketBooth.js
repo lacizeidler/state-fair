@@ -30,12 +30,54 @@ eventHub.addEventListener(
         }
     }
 )
-
+// Game Ticket Custom Event 
+export const gameEvent = new CustomEvent("gameTicketPurchased", {
+    detail: {
+        selectedTickets: "#gameTicket"
+    }
+})
+eventHub.addEventListener(
+    "click",
+    (clickEvent) => {
+        if (clickEvent.target.id === "gameTicket") {
+            eventHub.dispatchEvent(new CustomEvent ("gameTicketPurchased"))
+        }
+    }
+)
+// Sideshow Ticket Custom Event 
+export const sideshowEvent = new CustomEvent("sideshowTicketPurchased", {
+    detail: {
+        selectedTickets: "#sideshowTicket"
+    }
+})
+eventHub.addEventListener(
+    "click",
+    (clickEvent) => {
+        if (clickEvent.target.id === "sideshowTicket") {
+            eventHub.dispatchEvent(new CustomEvent ("sideshowTicketPurchased"))
+        }
+    }
+)
+// Full Package Custom Event
+export const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased", {
+    detail: {
+        selectedTickets: "#fullPackageTicket"
+    }
+})
+eventHub.addEventListener(
+    "click",
+    (clickEvent) => {
+        if (clickEvent.target.id === "fullPackageTicket") {
+            eventHub.dispatchEvent(new CustomEvent ("fullPackageTicketPurchased"))
+        }
+    }
+)
 
 
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
+        <div id="ticketsPurchased"></div>
         <button id="rideTicket">Ride Ticket</button>
         <button id="foodTicket">Food Ticket</button>
         <button id="gameTicket">Game Ticket</button>
