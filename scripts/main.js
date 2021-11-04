@@ -4,8 +4,8 @@ import { FullPackageTicketHolders } from "./fullPackage.js";
 import { GameTicketHolders } from "./games/GameTicketHolder.js";
 import { RideTicketHolders } from "./rides/RideTicketHolders.js";
 import { SideshowTicketHolders } from "./sideshows/SideshowTicketHolder.js";
-import { TicketBooth } from "./TicketBooth.js";
-import { SampleComponent } from "./ticketCounter.js";
+import { SampleComponent, TicketBooth } from "./TicketBooth.js";
+
 SideshowTicketHolders()
 GameTicketHolders()
 foodTicketHolders()

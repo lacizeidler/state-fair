@@ -1,78 +1,34 @@
 const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
 
+// const contentTargetIsh = document.querySelector("#rideTicket")
 
+export const SampleComponent = () => {
+    let totalTickets = 0
+    document.querySelector("#ticketsPurchased").innerHTML = `Total tickets purchased: ${++totalTickets}`
+}
 // Ride Ticket Custom Event 
-export const rideEvent = new CustomEvent("rideTicketPurchased", {
-    detail: {
-        selectedTickets: "#rideTicket"
-    }
-})
 eventHub.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id === "rideTicket") {
             eventHub.dispatchEvent(new CustomEvent ("rideTicketPurchased"))
-        }
-    }
-)
-// Food Ticket Custom Event
-export const foodEvent = new CustomEvent("foodTicketPurchased", {
-    detail: {
-        selectedTickets: "#foodTicket"
-    }
-})
-eventHub.addEventListener(
-    "click",
-    (clickEvent) => {
-        if (clickEvent.target.id === "foodTicket") {
+            SampleComponent()
+        } else if (clickEvent.target.id === "foodTicket") {
             eventHub.dispatchEvent(new CustomEvent ("foodTicketPurchased"))
-        }
-    }
-)
-// Game Ticket Custom Event 
-export const gameEvent = new CustomEvent("gameTicketPurchased", {
-    detail: {
-        selectedTickets: "#gameTicket"
-    }
-})
-eventHub.addEventListener(
-    "click",
-    (clickEvent) => {
-        if (clickEvent.target.id === "gameTicket") {
+            SampleComponent()
+        } else if (clickEvent.target.id === "gameTicket") {
             eventHub.dispatchEvent(new CustomEvent ("gameTicketPurchased"))
-        }
-    }
-)
-// Sideshow Ticket Custom Event 
-export const sideshowEvent = new CustomEvent("sideshowTicketPurchased", {
-    detail: {
-        selectedTickets: "#sideshowTicket"
-    }
-})
-eventHub.addEventListener(
-    "click",
-    (clickEvent) => {
-        if (clickEvent.target.id === "sideshowTicket") {
+            SampleComponent()
+        } else if (clickEvent.target.id === "sideshowTicket") {
             eventHub.dispatchEvent(new CustomEvent ("sideshowTicketPurchased"))
-        }
-    }
-)
-// Full Package Custom Event
-export const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased", {
-    detail: {
-        selectedTickets: "#fullPackageTicket"
-    }
-})
-eventHub.addEventListener(
-    "click",
-    (clickEvent) => {
-        if (clickEvent.target.id === "fullPackageTicket") {
+            SampleComponent()
+        } else if (clickEvent.target.id === "fullPackageTicket") {
             eventHub.dispatchEvent(new CustomEvent ("fullPackageTicketPurchased"))
+            SampleComponent()
         }
     }
 )
-
 
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
